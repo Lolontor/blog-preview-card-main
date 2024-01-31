@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700;900&display=swap');
+
+:root{
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--Yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.rounded-edge{
+    border-radius: .9em;
+}
+
+.bold-text{
+    font-weight: 800;
+}
+
+.small-font{
+    font-size: .85rem;
+}
+
+.card{
+    width: 18rem;
+    border: 1px solid var(--Black);
+    padding: 1rem;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 6px 7px 2px 1px var(--Black);
+}
+
+.card:has(.title:hover){
+    box-shadow: 10px 10px 2px 1px var(--Black);
+}
+
+.article-image{
+    width: 100%;
+}
+
+.category{
+    background-color: var(--Yellow);
+    max-width: 32%;
+    text-align: center;
+    padding-block: .5rem;
+    border-radius: .3rem;
+}
+
+.date-published{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.title{
+    font-size: 1.2rem;
+}
+
+.title:hover{
+    color: var(--Yellow);
+    cursor: pointer;
+}
+
+.description{
+    font-size: .8rem;
+    color: var(--Grey);
+    line-height: 1.15rem;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.profile-image{
+    height: 2.1rem;
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* for desktop view */
+@media (width > 375px){
+    .card{
+        width: 20rem;
+    }
+}
